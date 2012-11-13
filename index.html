@@ -148,8 +148,8 @@
       @destination = Account.find(dest_id)
     end
     def execute(amount)
-      @source -= amount
-      @destination += amount
+      @source.amount -= amount
+      @destination.amount += amount
     end
   end
             </code></pre>
@@ -187,7 +187,8 @@
           <pre><code class="ruby" contenteditable>
   class AccountController < ActiveSupport::TestCase
     def transfer
-      TransferContext.new(params[:source], params[:dest])
+      transfer_context = TransferContext.new(params[:source], params[:dest])
+      transfer_context.execute(params(:amount))
     end
   end
             </code></pre>
