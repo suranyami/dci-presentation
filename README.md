@@ -3,7 +3,7 @@ DCI Presentation
 
 A presentation for ROROSyd.
 
-Done with [http://lab.hakim.se/reveal-js/](reveal.js)
+Done with [reveal.js](http://lab.hakim.se/reveal-js/)
 
 To run, checkout this repo:
 
